@@ -9,7 +9,25 @@ The example uses "jash" javascript shell bookmarklet.
 This technique could be applied for converting any bookmarklet 
 to chrome "browserAction" button (right side of the url bar).
 
+## Artcitecture
+
+Files:
+
+- jash/manifest.json : descrition for browserAction extension
+- jash/loader.html : generic background-page HTML
+- jash/bookmarklet.js : javascript code from bookmarklet code
+- jash/images/icon.png : required icon image
+- jash/images/gen.sh : generating icon with "convert" (ImageMagick) command
+
+Steps:
+
+1. modify manifest.json: "name" and "description" entry
+2. modify icon.png (or modify label and color in gen.sh, then run it)
+3. modify bookmarklet.js : convert bookmarklet js code into pure js code
+4. build package crx and release it
+
 ## build with crxmake
+
 
 install crxmake:
 
@@ -30,5 +48,15 @@ build:
 
 ## Resource
 
+for packaging:
+
 - http://code.google.com/chrome/extensions/packaging.html
 - http://dev.chromium.org/developers/design-documents/extensions/packaging
+
+for extension specifications:
+
+- http://code.google.com/chrome/extensions/manifest.html
+- http://code.google.com/chrome/extensions/browserAction.html
+- http://code.google.com/chrome/extensions/background_pages.html
+- http://code.google.com/chrome/extensions/tabs.html
+
