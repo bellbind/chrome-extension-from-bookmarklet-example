@@ -1,0 +1,13 @@
+{
+  "name": "Jash Console",
+  "version": "0.1",
+  "description": "This extension is converted from Jash bookmarklet",
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_title": "jash"
+  },
+  "background_page": "loader.html",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ]
+}

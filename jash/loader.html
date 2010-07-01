@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>//<!--
+function init() {
+  chrome.browserAction.onClicked.addListener(function (tab) {
+    chrome.tabs.executeScript(tab.id, {"file": "bookmarklet.js"});
+  });
+}
+//--></script>
+</head>
+<body onload="init()"></body>
+</html>
