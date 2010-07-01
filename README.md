@@ -13,11 +13,11 @@ to chrome "browserAction" button (right side of the url bar).
 
 Files:
 
-- jash/manifest.json : descrition for browserAction extension
-- jash/loader.html : generic background-page HTML
-- jash/bookmarklet.js : javascript code from bookmarklet code
-- jash/images/icon.png : required icon image
-- jash/images/gen.sh : generating icon with "convert" (ImageMagick) command
+- /manifest.json : descrition for browserAction extension
+- /loader.html : generic background-page HTML
+- /bookmarklet.js : javascript code from bookmarklet code
+- /images/icon.png : required icon image
+- /images/gen.sh : generating icon with "convert" (ImageMagick) command
 
 Steps:
 
@@ -26,8 +26,8 @@ Steps:
 3. modify bookmarklet.js : convert bookmarklet js code into pure js code
 4. build package crx and release it
 
-## build with crxmake
 
+## build with crxmake
 
 install crxmake:
 
@@ -45,8 +45,7 @@ build:
     chrome.exe --pack-extension=jash
 
 
-
-## Resource
+## Resources
 
 for packaging:
 
